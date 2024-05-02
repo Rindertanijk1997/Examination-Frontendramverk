@@ -1,0 +1,28 @@
+.count {
+    width: 230px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; /* Detta hjälper till att fördela utrymmet jämnt */
+    border: 2px solid rgba(245, 107, 154, 1); /* Lägger till en gräns */
+    border-radius: 3px;
+    box-sizing: border-box; /* Inkluderar padding och border i elementets totala bredd och höjd */
+    overflow: hidden; /* Förhindrar innehåll från att spilla över kanten */
+}
+
+.buttons {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    margin: 5px; /* Liten marginal runt knapparna för att ge utrymme */
+    border: none;
+    border-radius: 5px;
+    background-color: #f5699a;
+    color: white;
+}
+
+.totalPrice {
+    font-size: 16px; /* Justerar storleken på texten om nödvändigt */
+    color: #333; /* Ger texten en färg */
+}

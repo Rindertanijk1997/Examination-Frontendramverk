@@ -1,0 +1,28 @@
+
+.Homepage {}
+
+.HomepageIMG {
+    width: 182px;
+    height: 178px;
+    background-color: rgba(35, 31, 66, 1);
+    margin-top: 171px;
+    margin-left: 96px;
+}
+
+.Homepage-h1 {
+    display: flex;
+    font-size: 32px;
+    justify-content: center;
+    color: rgba(245, 107, 154, 1);
+    font-family: sans-serif;
+    height: auto;
+}
+
+.Homepage-p {
+    display: flex;
+    font-size: 22px;
+    justify-content: center;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Fira Sans';
+    height: auto;
+}
