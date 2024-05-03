@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import useTicketStore from './path/to/ticketStore';
 
 const Order = () => {
   const location = useLocation();

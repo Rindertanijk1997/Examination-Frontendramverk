@@ -3,6 +3,7 @@ import './event.css';
 import { useParams, useLocation } from 'react-router-dom';
 import EventButton from '../../components/EventButton/EventButton';
 import TicketCounter from '../../components/EventTicketCount/EventTicketCount';
+import useTicketStore from './path/to/ticketStore';
 
 
 const Event = () => {
