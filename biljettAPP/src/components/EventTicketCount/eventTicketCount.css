@@ -1,28 +1,71 @@
+
+.count-wrapper {
+    margin-top: 5rem;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+}
+
+
 .count {
     width: 230px;
     height: 130px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around; /* Detta hjälper till att fördela utrymmet jämnt */
-    border: 2px solid rgba(245, 107, 154, 1); /* Lägger till en gräns */
+    justify-content: space-around;
+    border: 2px solid rgba(245, 107, 154, 1);
     border-radius: 3px;
-    box-sizing: border-box; /* Inkluderar padding och border i elementets totala bredd och höjd */
-    overflow: hidden; /* Förhindrar innehåll från att spilla över kanten */
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-direction: column;
 }
 
-.buttons {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-    margin: 5px; /* Liten marginal runt knapparna för att ge utrymme */
-    border: none;
-    border-radius: 5px;
-    background-color: #f5699a;
-    color: white;
-}
 
 .totalPrice {
-    font-size: 16px; /* Justerar storleken på texten om nödvändigt */
-    color: #333; /* Ger texten en färg */
+
+    color: rgba(255, 255, 255, 1);
+    font-family: Fira Sans;
+    font-size: 32px;
+    line-height: 38.4px;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(245, 107, 154, 1);
+
+}
+
+.antal-biljetter {
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+
+.button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid rgba(245, 107, 154, 1);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.number {
+    font-family: Fira Sans;
+    font-size: 28px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+
 }

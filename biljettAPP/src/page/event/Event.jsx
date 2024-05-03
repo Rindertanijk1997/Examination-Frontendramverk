@@ -1,25 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './event.css';
 import { useParams, useLocation } from 'react-router-dom';
 import EventButton from '../../components/EventButton/EventButton';
 import TicketCounter from '../../components/EventTicketCount/EventTicketCount';
 
-   const Event = () => {
-       const { eventName } = useParams();
-       const location = useLocation();
-       const events = location.state?.events;
 
-       console.log(events);
-       if (!events) {
-           return <div>Loading...</div>;
-       }
+const Event = () => {
+  const { eventName } = useParams();
+  const location = useLocation(); 
+  const events = location.state?.events;
 
-       const event = events.find(event => event.name === eventName);
+  console.log(events);
+  if (!events) {
+    return <div>Loading...</div>;
+  }
 
-       if (!event) {
-           return <div>Eventet kunde inte hittas.</div>;
-       }
+  const event = events.find(event => event.name === eventName);
 
+  const [ticketCount, setTicketCount] = useState(0);
+
+  if (!event) {
+    return <div>Eventet kunde inte hittas.</div>;
+  }
 
   return (
     <section className='event'>
@@ -34,15 +36,21 @@ import TicketCounter from '../../components/EventTicketCount/EventTicketCount';
         <p className='event-where'>@ {event.where}</p>
       </section>
 
-      
-      <TicketCounter price={event.price} />
+      <TicketCounter event={event} setTicketCount={setTicketCount} />
 
-      <EventButton />
+
+      <EventButton event={event} ticketCount={ticketCount} />
+
+     
+   
 
     </section>
   );
 }
 
 export default Event;
+
+
+
 
 
