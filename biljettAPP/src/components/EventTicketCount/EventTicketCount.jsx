@@ -1,29 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './eventTicketCount.css';
+import useTicketStore from '../../components/ticketStore'; 
 
 const TicketCounter = ({ event }) => {
-  const [count, setCount] = useState(1); 
+  const { ticketCount, increaseTicketCount, decreaseTicketCount } = useTicketStore();
 
-  const incrementCount = () => {
-    setCount(prevCount => prevCount + 1);
-  };
-
-  const decrementCount = () => {
-    if (count > 1) {
-      setCount(prevCount => prevCount - 1);
-    }
-  };
-
-  const totalPrice = event ? event.price * count : 0;
+  const totalPrice = event ? event.price * ticketCount : 0;
 
   return (
     <section className='count-wrapper'>
       <section className='count'>
         <p className='totalPrice'>{totalPrice} SEK</p>
         <section className='antal-biljetter'>
-          <button onClick={decrementCount} className='button'><img src="/assets/minus.png" alt="minus" /></button>
-          <p className="number">{count}</p>
-          <button onClick={incrementCount} className='button'><img src="/assets/plus.png" alt="plus" /></button>
+          <button onClick={decreaseTicketCount} className='button'><img src="/assets/minus.png" alt="minus" /></button>
+          <p className="number">{ticketCount}</p>
+          <button onClick={increaseTicketCount} className='button'><img src="/assets/plus.png" alt="plus" /></button>
         </section>
       </section>
     </section>

@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './event.css';
 import { useParams, useLocation } from 'react-router-dom';
 import EventButton from '../../components/EventButton/EventButton';
 import TicketCounter from '../../components/EventTicketCount/EventTicketCount';
-import useTicketStore from './path/to/ticketStore';
-
+import useTicketStore from '../../components/ticketStore'; 
 
 const Event = () => {
   const { eventName } = useParams();
@@ -17,12 +16,11 @@ const Event = () => {
   }
 
   const event = events.find(event => event.name === eventName);
-
-  const [ticketCount, setTicketCount] = useState(0);
-
   if (!event) {
     return <div>Eventet kunde inte hittas.</div>;
   }
+
+  const { ticketCount, setTicketCount } = useTicketStore(); 
 
   return (
     <section className='event'>
@@ -37,14 +35,9 @@ const Event = () => {
         <p className='event-where'>@ {event.where}</p>
       </section>
 
-      <TicketCounter event={event} setTicketCount={setTicketCount} />
-
+      <TicketCounter event={event} /> 
 
       <EventButton event={event} ticketCount={ticketCount} />
-
-     
-   
-
     </section>
   );
 }
