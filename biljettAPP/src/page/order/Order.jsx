@@ -1,11 +1,13 @@
+import './order.css';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import useTicketStore from '../../components/ticketStore'; 
+import TicketCounter from '../../components/EventTicketCount/EventTicketCount';
 
 const Order = () => {
   const location = useLocation();
   const [event, setEvent] = useState(null);
-  const { ticketCount } = useTicketStore(); // Använd Zustand storen för att hämta antalet biljetter
+  const { tickets } = useTicketStore(state => state);
 
   useEffect(() => {
     console.log('Location state:', location.state); // Lägg till för att se state vid varje render
@@ -22,9 +24,9 @@ const Order = () => {
 
   return (
     <div>
-      <h1 className='event-name'>{event.name}</h1>
-      <p className='event-time'>{event.when.formattedDate} kl: {event.when.from} - {event.when.to}</p>
-      <p className='ticket-count'>Antal biljetter: {ticketCount}</p> {/* Visa antalet biljetter här */}
+      {tickets[event.id] && tickets[event.id] > 0 && (
+        <TicketCounter event={event} showOrderDetails={true} />
+      )}
     </div>
   );
 };
