@@ -1,5 +1,3 @@
-// Event.jsx
-
 import React from 'react';
 import './event.css';
 import { useParams, useLocation } from 'react-router-dom';
