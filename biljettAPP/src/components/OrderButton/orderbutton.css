@@ -1,0 +1,20 @@
+body { 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+.orderbutton {
+    font-family: Fira Sans;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    width: 310px;
+    height: 60px;
+    border-radius: 3px 0px 0px 0px;
+    background-color: rgba(55, 174, 171, 1);
+    margin-bottom: 1.5rem;
+   
+}

@@ -2,6 +2,16 @@
     color: aliceblue;
 }
 
+
+.order-page-h1{
+    display: flex;
+    font-size: 32px;
+    justify-content: center;
+    color: rgba(245, 107, 154, 1);
+    padding-top: 32px;
+    height: auto;
+}
+
 .count-wrapper {
     margin-top: 5rem;
     height: 130px;
@@ -83,5 +93,25 @@
 
 }
 
+.total-price-p {
+    font-family: Fira Sans;
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 22.8px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 1rem;
+    
+}
 
-  
+
+.total-price {
+    font-family: Fira Sans;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.4px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    margin: 1rem;
+}

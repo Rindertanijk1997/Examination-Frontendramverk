@@ -1,13 +1,14 @@
 import React from 'react';
 import './order.css';
-import useTicketStore from '../../components/ticketStore'; 
+import useTicketStore from '../../components/ticketStore';
 import TicketCounter from '../../components/EventTicketCount/EventTicketCount';
+import OrderButton from '../../components/OrderButton/OrderButton';
 
 const Order = () => {
-  const { order, tickets } = useTicketStore(); // Hämtar order och tickets från storen
+  const { order, tickets } = useTicketStore();
 
   if (!order.length) {
-    return <div>Inga events i varukorgen.</div>; // Om inga events har lagts till, visa detta meddelande
+    return <div>Inga events i varukorgen.</div>;
   }
 
   // Beräkna totala kostnaden
@@ -18,15 +19,19 @@ const Order = () => {
 
   return (
     <section className='order-page'>
-      <h1>Din Order</h1>
+      <h1 className='order-page-h1'>Order</h1>
       {order.map((event, index) => (
         <section key={index} className='order-item'>
           <TicketCounter event={event} showOrderDetails={true} />
         </section>
       ))}
-      <section className='total-price'>
-        <h2>Total kostnad: {totalCost} SEK</h2>
+      <section>
+        <p className='total-price-p'>Totalt värde på order</p>
+        <h2 className='total-price'> {totalCost} SEK</h2>
       </section>
+
+      <OrderButton />
+
     </section>
   );
 };
