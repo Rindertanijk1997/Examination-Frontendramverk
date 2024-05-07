@@ -1,3 +1,5 @@
+// Event.jsx
+
 import React from 'react';
 import './event.css';
 import { useParams, useLocation } from 'react-router-dom';
@@ -10,7 +12,9 @@ const Event = () => {
   const location = useLocation(); 
   const events = location.state?.events;
 
-  console.log(events);
+  console.log('Location state in Event component:', location.state);
+  console.log('Events in Event component:', events);
+  
   if (!events) {
     return <div>Loading...</div>;
   }
@@ -19,6 +23,8 @@ const Event = () => {
   if (!event) {
     return <div>Eventet kunde inte hittas.</div>;
   }
+
+  console.log('Selected event in Event component:', event);
 
   const { ticketCount, setTicketCount } = useTicketStore(); 
 
@@ -43,6 +49,9 @@ const Event = () => {
 }
 
 export default Event;
+
+
+
 
 
 

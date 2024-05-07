@@ -6,7 +6,7 @@ import Tickets from './page/tickets/Tickets';
 import HomePage from './page/homePage/HomePage';
 import Events from './page/events/Events';
 import Event from './page/event/Event';
-import SwipeableWrapper from './components/SwipeableWrapper'; // Antag att denna komponent hanterar svepfungerande
+import SwipeableWrapper from './components/SwipeableWrapper'; 
 
 function App() {
   return (
