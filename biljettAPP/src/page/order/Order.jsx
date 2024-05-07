@@ -10,16 +10,24 @@ const Order = () => {
     return <div>Inga events i varukorgen.</div>; // Om inga events har lagts till, visa detta meddelande
   }
 
+  // Beräkna totala kostnaden
+  const totalCost = order.reduce((acc, event) => {
+    const numberOfTickets = tickets[event.id] || 0;
+    return acc + (numberOfTickets * event.price);
+  }, 0);
+
   return (
-    <div className='order-page'>
+    <section className='order-page'>
       <h1>Din Order</h1>
       {order.map((event, index) => (
-        <div key={index} className='order-item'>
-         
+        <section key={index} className='order-item'>
           <TicketCounter event={event} showOrderDetails={true} />
-        </div>
+        </section>
       ))}
-    </div>
+      <section className='total-price'>
+        <h2>Total kostnad: {totalCost} SEK</h2>
+      </section>
+    </section>
   );
 };
 
