@@ -21,7 +21,7 @@ const useStore = create((set) => ({
           }
         };
       });
-      console.log('Formatted events:', formattedEvents);  // Här loggar vi de formaterade eventen
+      console.log('Formatted events:', formattedEvents);  
       set({ events: formattedEvents, loading: false });
     } catch (error) {
       console.log('Error fetching events:', error);

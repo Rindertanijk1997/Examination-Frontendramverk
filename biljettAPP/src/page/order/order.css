@@ -1,0 +1,95 @@
+.ticket-count {
+    color: aliceblue;
+}
+
+
+.order-page-h1{
+    display: flex;
+    font-size: 32px;
+    justify-content: center;
+    color: rgba(245, 107, 154, 1);
+    padding-top: 32px;
+    height: auto;
+}
+
+
+
+.event.name {
+
+    font-family: Sansita One;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 27.96px;
+    text-align: center;
+
+    text-shadow: 1px 1px 0 rgba(245, 107, 154, 1);
+
+}
+
+.event.time {
+    font-family: Fira Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: center;
+
+}
+
+.antal-biljetter {
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+
+.button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid rgba(245, 107, 154, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    font-family: Fira Sans;
+    font-size: 28px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.total-price-p {
+    font-family: Fira Sans;
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 22.8px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 1rem;
+    
+}
+
+
+.total-price {
+    font-family: Fira Sans;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.4px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    margin: 1rem;
+}

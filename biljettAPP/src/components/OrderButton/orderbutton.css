@@ -5,7 +5,7 @@ body {
     
 }
 
-.eventbutton {
+.orderbutton {
     font-family: Fira Sans;
     font-size: 22px;
     font-weight: 600;
@@ -15,7 +15,6 @@ body {
     height: 60px;
     border-radius: 3px 0px 0px 0px;
     background-color: rgba(55, 174, 171, 1);
-    margin-top: 3rem;
+    margin-bottom: 1.5rem;
    
 }
-

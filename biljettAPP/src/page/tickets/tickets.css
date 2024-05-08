@@ -1,0 +1,43 @@
+.tickets-info {
+    background-color: rgba(255, 255, 255, 1);
+    width: 311px;
+    height: 450px;
+    border-radius: 3px 0px 0px 0px;
+    margin: 1rem;
+
+
+}
+
+.tickets-info h1,
+.tickets-info p {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tickets-info-name {
+    color: rgba(245, 107, 154, 1);
+    font-family: Sansita One;
+    font-size: 26px;
+    line-height: 30.29px;
+    text-align: left;
+
+}
+
+.tickets-info-where {}
+
+.tickets-info-date {}
+
+.tickets-info-time {}
+
+.tickets-info-id {}
+
+.tickets-info-section {}
+
+
+.tickets-info-seat {}
+
+.ticket-img {
+    width: 211px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 1);
+
+}

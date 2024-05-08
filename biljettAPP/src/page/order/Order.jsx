@@ -1,9 +1,44 @@
-import './order.css'
+import React from 'react';
+import './order.css';
+import useTicketStore from '../../components/ticketStore';
+import TicketCounter from '../../components/EventTicketCount/EventTicketCount';
+import OrderButton from '../../components/OrderButton/OrderButton';
+import { useNavigate } from 'react-router-dom';
 
-function Order() {
+const Order = () => {
+  const navigate = useNavigate();
+  const { order, tickets } = useTicketStore();
+
+  const handleNavigateToTickets = () => {
+    navigate('/tickets', { state: { order, tickets } });
+  };
+
+  if (!order.length) {
+    return <div>Inga events i varukorgen.</div>;
+  }
+
+  const totalCost = order.reduce((acc, event) => {
+    const numberOfTickets = tickets[event.id] || 0;
+    return acc + (numberOfTickets * event.price);
+  }, 0);
+
   return (
-    <div>Order</div>
-  )
-}
+    <section className='order-page'>
+      <h1 className='order-page-h1'>Order</h1>
+      {order.map((event, index) => (
+        <section key={index} className='order-item'>
+          <TicketCounter event={event} showOrderDetails={true} />
+        </section>
+      ))}
+      <section>
+        <p className='total-price-p'>Totalt värde på order</p>
+        <h2 className='total-price'> {totalCost} SEK</h2>
+      </section>
 
-export default Order
+      <OrderButton onClick={handleNavigateToTickets} />
+
+    </section>
+  );
+};
+
+export default Order;
