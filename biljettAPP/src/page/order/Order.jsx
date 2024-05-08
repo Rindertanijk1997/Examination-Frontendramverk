@@ -3,15 +3,20 @@ import './order.css';
 import useTicketStore from '../../components/ticketStore';
 import TicketCounter from '../../components/EventTicketCount/EventTicketCount';
 import OrderButton from '../../components/OrderButton/OrderButton';
+import { useNavigate } from 'react-router-dom';
 
 const Order = () => {
+  const navigate = useNavigate();
   const { order, tickets } = useTicketStore();
+
+  const handleNavigateToTickets = () => {
+    navigate('/tickets', { state: { order, tickets } });
+  };
 
   if (!order.length) {
     return <div>Inga events i varukorgen.</div>;
   }
 
-  // Beräkna totala kostnaden
   const totalCost = order.reduce((acc, event) => {
     const numberOfTickets = tickets[event.id] || 0;
     return acc + (numberOfTickets * event.price);
@@ -30,7 +35,7 @@ const Order = () => {
         <h2 className='total-price'> {totalCost} SEK</h2>
       </section>
 
-      <OrderButton />
+      <OrderButton onClick={handleNavigateToTickets} />
 
     </section>
   );
