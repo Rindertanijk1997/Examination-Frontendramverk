@@ -52,15 +52,16 @@ const generateTickets = (event, numTickets) => {
 
 // Biljettkomponent
 const Ticket = ({ event }) => (
-  <div>
-    <h2>{event.name}</h2>
-    <p>Plats: {event.where}</p>
-    <p>Datum: {event.when.date}</p>
-    <p>Tid: {event.when.from} - {event.when.to}</p>
-    <p>Biljett-ID: {event.ticketID}</p>
-    <p>Sektion: {event.section}</p>
-    <p>Sittplats: {event.seat}</p>
-  </div>
+  <section className='tickets-info'>
+    <h1 className='tickets-info-name'> WHAT {event.name}</h1>
+    <p className='tickets-info-where'>WHERE {event.where}</p>
+    <p className='tickets-info-date'>WHEN {event.when.date}</p>
+    <p className='tickets-info-time'>FROM {event.when.from} TO {event.when.to}</p>
+    <p className='tickets-info-section'>SECTION {event.section}</p>
+    <p className='tickets-info-seat'>SEAT {event.seat}</p>
+    <img src="./assets/code.png" className='ticket-img' alt="code-img" />
+    <p className='tickets-info-id'># {event.ticketID}</p>
+  </section>
 );
 
 function Tickets() {
@@ -72,22 +73,22 @@ function Tickets() {
   }
 
   return (
-    <div>
+    <section>
       
       {order.map((event, index) => {
         // Generera biljetter för evenemanget
         const eventTickets = generateTickets(event, tickets[event.id]);
 
         return (
-          <div key={index}>
+          <section key={index}>
             {eventTickets.map((ticket, index) => (
               <Ticket key={index} event={ticket} />
             ))}
           
-          </div>
+          </section>
         );
       })}
-    </div>
+    </section>
   );
 }
 
