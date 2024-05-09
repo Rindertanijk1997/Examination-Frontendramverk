@@ -53,14 +53,43 @@ const generateTickets = (event, numTickets) => {
 // Biljettkomponent
 const Ticket = ({ event }) => (
   <section className='tickets-info'>
-    <h1 className='tickets-info-name'> WHAT {event.name}</h1>
-    <p className='tickets-info-where'>WHERE {event.where}</p>
-    <p className='tickets-info-date'>WHEN {event.when.date}</p>
-    <p className='tickets-info-time'>FROM {event.when.from} TO {event.when.to}</p>
-    <p className='tickets-info-section'>SECTION {event.section}</p>
-    <p className='tickets-info-seat'>SEAT {event.seat}</p>
-    <img src="./assets/code.png" className='ticket-img' alt="code-img" />
-    <p className='tickets-info-id'># {event.ticketID}</p>
+    <section className='tickets-info-name-section'>
+      <p className='tickets-info-name-p'>WHAT </p>
+      <h1 className='tickets-info-name'> {event.name}</h1>
+    </section>
+
+    <section className='tickets-info-where-section'>
+      <p className='tickets-info-where-p'>WHERE </p>
+      <h3 className='tickets-info-where'> {event.where}</h3>
+    </section>
+
+<section className='tickets-info-time-section'>
+    <section className='tickets-info-when-section'>
+      <p className='tickets-info-time-p'>WHEN </p>
+      <h3 className='tickets-info-time'> {event.when.date}</h3>
+    </section>
+
+    <section className='tickets-info-from-section'>
+      <p className='tickets-info-time-p'>FROM </p>
+      <h3 className='tickets-info-time'> {event.when.from}</h3>
+    </section>
+
+    <section className='tickets-info-to-section'>
+      <p className='tickets-info-time-p'>TO </p>
+      <h3 className='tickets-info-time'> {event.when.to}</h3>
+    </section>
+    </section>
+
+    <section className='tickets-info-seat-section'>
+      <p className='tickets-info-seat-p'>INFO </p>
+      <h3 className='tickets-info-seat'>SECTION {event.section} SEAT {event.seat}</h3>
+    </section>
+
+    <section className='tickets-info-qrcode-section'>
+      <img src="./assets/code.png" className='ticket-img' alt="code-img" />
+      <h3 className='tickets-info-id'># {event.ticketID}</h3>
+    </section>
+
   </section>
 );
 
@@ -74,7 +103,7 @@ function Tickets() {
 
   return (
     <section>
-      
+
       {order.map((event, index) => {
         // Generera biljetter för evenemanget
         const eventTickets = generateTickets(event, tickets[event.id]);
@@ -84,7 +113,7 @@ function Tickets() {
             {eventTickets.map((ticket, index) => (
               <Ticket key={index} event={ticket} />
             ))}
-          
+
           </section>
         );
       })}
