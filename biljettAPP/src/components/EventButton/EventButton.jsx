@@ -8,8 +8,8 @@ const EventButton = ({ event }) => {
   const { addToOrder } = useTicketStore();
 
   const handleAddToOrder = () => {
-    addToOrder(event);  // Lägger till eventet till ordern
-    navigate('/order'); // Navigerar till order-sidan
+    addToOrder(event);  
+    navigate('/order');
   };
 
   return (

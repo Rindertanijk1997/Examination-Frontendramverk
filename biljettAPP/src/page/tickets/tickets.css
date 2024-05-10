@@ -1,13 +1,10 @@
-.tickets-container{
-    background-image: linear-gradient(to top, #231F42, #F56B9A);
-}
-
 .tickets-info {
     background-color: rgba(255, 255, 255, 1);
     width: 311px;
     height: 450px;
     border-radius: 3px 0px 0px 0px;
     margin: 2rem;
+    margin-bottom: 4rem;
 
 
 }

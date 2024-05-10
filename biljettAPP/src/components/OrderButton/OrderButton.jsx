@@ -4,7 +4,7 @@ import './orderbutton.css';
 const OrderButton = ({ onClick }) => {
   return (
     <section className='container'>
-    <button className='orderbutton' onClick={onClick}>Visa Biljetter</button>
+    <button className='orderbutton' onClick={onClick}>Skicka Order</button>
     </section>
   );
 };

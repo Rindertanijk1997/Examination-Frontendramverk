@@ -13,7 +13,7 @@ const generateTicketID = (length) => {
   return result;
 };
 
-// Funktion för att generera slumpade sittplatser med hänsyn till att de ska vara bredvid varandra
+// Funktion för att generera slumpade sittplatser där de ska vara bredvid varandra
 const generateSeats = (numSeats, startSeat) => {
   const seats = [];
   let lastSeat = startSeat;
