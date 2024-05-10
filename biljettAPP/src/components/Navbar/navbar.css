@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 375px; /* Matcha bredden av #root */
+  max-width: 500px; /* Säkerställ att den inte går över skärmbredden på mindre enheter */
+  position: fixed;
+  bottom: 0;
+  left: 50%; /* Centrerar navbaren */
+  transform: translateX(-50%); /* Flyttar navbaren tillbaka till mitten */
+  background: gray;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.navbar a {
+  color: pink;
+  text-decoration: none;
+  font-size: 16px;
+}
