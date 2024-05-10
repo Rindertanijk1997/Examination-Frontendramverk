@@ -1,12 +1,17 @@
 
-.Homepage {}
+.Homepage {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 10rem;
+}
 
 .HomepageIMG {
     width: 182px;
     height: 178px;
     background-color: rgba(35, 31, 66, 1);
-    margin-top: 171px;
-    margin-left: 96px;
+    margin: 0 auto;
+   
 }
 
 .Homepage-h1 {

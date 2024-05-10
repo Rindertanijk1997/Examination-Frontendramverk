@@ -4,8 +4,9 @@
 
 :root { 
     background-color: aliceblue;
-    width: 375px;
-    height: 667px;
+    max-width: 500px;
+    min-width: 375px;
+    height: 100vh;
     margin: 0 auto;
 }
 

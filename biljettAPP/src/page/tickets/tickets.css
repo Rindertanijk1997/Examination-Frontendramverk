@@ -3,41 +3,147 @@
     width: 311px;
     height: 450px;
     border-radius: 3px 0px 0px 0px;
-    margin: 1rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
 
 
 }
 
 .tickets-info h1,
-.tickets-info p {
+.tickets-info p,
+.tickets-info h3 {
     background-color: rgba(255, 255, 255, 1);
+}
+
+
+
+.tickets-info-name-p {
+    font-family: "Fira Sans";
+    font-size: 10px;
+    line-height: 12px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.4);
+    padding: .5rem 1rem;
+
+
 }
 
 .tickets-info-name {
     color: rgba(245, 107, 154, 1);
-    font-family: Sansita One;
+    font-family: "Sansita One";
     font-size: 26px;
     line-height: 30.29px;
-    text-align: left;
+    padding: .5rem 1rem;
+    padding-bottom: 1rem;
 
 }
 
-.tickets-info-where {}
+.tickets-info-where-section {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
 
-.tickets-info-date {}
+.tickets-info-where-p {
+    font-family: "Fira Sans";
+    font-size: 10px;
+    line-height: 12px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.4);
+    padding: .5rem 1rem;
 
-.tickets-info-time {}
 
-.tickets-info-id {}
+}
 
-.tickets-info-section {}
+.tickets-info-where {
+    color: rgba(0, 0, 0, 0.7);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    line-height: 21.6px;
+    padding: .5rem 1rem;
+    padding-bottom: 3rem;
+
+}
+
+.tickets-info-time-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
+
+}
+
+.tickets-info-from-section {
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 0 1rem;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tickets-info-time-p {
+    font-family: "Fira Sans";
+    font-size: 10px;
+    line-height: 12px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.4);
+    padding: .5rem 0;
+}
+
+.tickets-info-time {
+    font-family: "Fira Sans";
+    font-size: 18px;
+    line-height: 21.6px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+    padding: .5rem 0;
+}
 
 
-.tickets-info-seat {}
+.tickets-info-seat-p {
+    font-family: "Fira Sans";
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.4);
+    padding: .5rem 1rem;
+}
+
+
+.tickets-info-seat {
+    font-family: "Fira Sans";
+    font-size: 12px;
+    padding: .2rem 1rem;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 2rem;
+
+
+}
+
+
+
+.tickets-info-qrcode-section {
+    background-color: rgba(255, 255, 255, 1);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
 
 .ticket-img {
     width: 211px;
     height: 60px;
     background-color: rgba(255, 255, 255, 1);
 
+}
+
+.tickets-info-id{
+    font-family: "Fira Sans";
+font-size: 12px;
+line-height: 14.4px;
+letter-spacing: 0.3em;
+text-align: center;
+color: rgba(0, 0, 0, 0.4);
+margin: 0.5rem;
 }

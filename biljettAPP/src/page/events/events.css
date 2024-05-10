@@ -1,5 +1,9 @@
+
 .Events {
     margin-top: auto;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    
 }
 
 .Events-h1 {
@@ -25,8 +29,10 @@
     height: 66px;
     margin: 0 auto;
     margin-bottom: 1.5rem;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: .5rem;
 }
 
 .section-left {
@@ -55,10 +61,12 @@
     display: flex;
     flex-direction: column;
     margin: 0;
+    position: absolute;
+    margin-left: 5.5rem;
 }
 
 .events-name {
-    font-family: Fira Sans;
+    font-family: "Fira Sans";
     font-size: 22px;
     margin: 0;
     text-shadow: 1px 1px 0 rgba(245, 107, 154, 1);
@@ -68,7 +76,7 @@
 }
 
 .events-where {
-    font-family: Fira Sans;
+    font-family: "Fira Sans";
     font-size: 12px;
     font-style: italic;
     color: rgba(255, 255, 255, 0.8);
@@ -79,7 +87,7 @@
 
 .events-time {
     color: rgba(208, 208, 208, 1);
-    font-family: Fira Sans;
+    font-family: "Fira Sans";
     font-size: 14px;
     margin: 2px;
     height: 14px;
@@ -96,9 +104,10 @@
 
 .price {
     height: 17px;
-    font-family: Fira Sans;
+    font-family: "Fira Sans";
     font-size: 17px;
     margin: 0;
+    position: relative;
 }
 
 .container{

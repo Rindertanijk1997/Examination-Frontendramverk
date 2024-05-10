@@ -1,6 +1,8 @@
 #root {
-    max-width: 375px;
-    min-height: 667px;
+    min-width: 375px;
+    max-width: 500px;
+    min-height: 100vh;
+    overflow: auto;
     margin: 0;
     background-color: #231F42;
 }
