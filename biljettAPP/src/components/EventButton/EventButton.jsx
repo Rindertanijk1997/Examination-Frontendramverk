@@ -13,7 +13,9 @@ const EventButton = ({ event }) => {
   };
 
   return (
+    <section className='container'>
     <button className='eventbutton' onClick={handleAddToOrder}>Lägg i varukorgen</button>
+    </section>
   );
 };
 

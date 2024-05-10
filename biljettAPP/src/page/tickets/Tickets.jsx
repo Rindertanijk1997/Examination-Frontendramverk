@@ -102,7 +102,7 @@ function Tickets() {
   }
 
   return (
-    <section>
+    <section className='tickets-container'>
 
       {order.map((event, index) => {
         // Generera biljetter för evenemanget

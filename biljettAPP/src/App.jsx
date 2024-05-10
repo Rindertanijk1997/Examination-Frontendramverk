@@ -6,19 +6,20 @@ import Tickets from './page/tickets/Tickets';
 import HomePage from './page/homePage/HomePage';
 import Events from './page/events/Events';
 import Event from './page/event/Event';
-import SwipeableWrapper from './components/SwipeableWrapper'; 
+import Navbar from './components/Navbar/Navbar'; // Antog att Navbar är i components mappen.
 
 function App() {
   return (
     <Router>
-      <div className="app">
+      <div className="app"> 
         <Routes>
-          <Route path="/" element={<SwipeableWrapper><HomePage /></SwipeableWrapper>} />
-          <Route path="/events" element={<SwipeableWrapper><Events /></SwipeableWrapper>} />
-          <Route path="/event/:eventName" element={<SwipeableWrapper><Event /></SwipeableWrapper>} />
-          <Route path="/order" element={<SwipeableWrapper><Order /></SwipeableWrapper>} />
-          <Route path="/tickets" element={<SwipeableWrapper><Tickets /></SwipeableWrapper>} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/event/:eventName" element={<Event />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/tickets" element={<Tickets />} />
         </Routes>
+        <Navbar />
       </div>
     </Router>
   );
