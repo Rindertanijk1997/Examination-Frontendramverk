@@ -7,10 +7,11 @@ import { useNavigate } from 'react-router-dom';
 
 const Order = () => {
   const navigate = useNavigate();
-  const { order, tickets } = useTicketStore();
+  const { order, tickets, resetOrder } = useTicketStore();
 
   const handleNavigateToTickets = () => {
     navigate('/tickets', { state: { order, tickets } });
+    resetOrder();  // Nollställer ordern när användaren klickar på knappen
   };
 
   if (!order.length) {
@@ -36,7 +37,6 @@ const Order = () => {
       </section>
 
       <OrderButton onClick={handleNavigateToTickets} />
-
     </section>
   );
 };
