@@ -16,7 +16,6 @@ const useTicketStore = create((set) => ({
       const newCount = Math.max(0, currentCount - number);
       const newTickets = { ...state.tickets, [eventId]: newCount };
       if (newCount === 0) {
-        // Ta bort eventet från ordern om inga biljetter finns kvar
         const newOrder = state.order.filter(event => event.id !== eventId);
         return { tickets: newTickets, order: newOrder };
       }
@@ -27,6 +26,9 @@ const useTicketStore = create((set) => ({
     set((state) => ({
       order: [...state.order, event]
     }));
+  },
+  resetOrder: () => {
+    set(() => ({ order: [] }));
   }
 }));
 
